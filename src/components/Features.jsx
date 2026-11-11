@@ -55,33 +55,31 @@ export default function Features() {
           </div>
 
           {/* Cards */}
-          <div className="mx-auto mt-[30px] grid max-w-[1200px] grid-cols-1 gap-[30px] md:mt-[40px] lg:grid-cols-2">
+          <div className="mx-auto mt-[20px] grid max-w-[1200px] max-[430px]:grid-cols-1 gap-[10px] md:mt-[40px] grid-cols-2">
             {items.map((item) => (
               <div
                 key={item.title}
-                className="flex min-w-0 flex-col gap-[20px] rounded-[18px] border border-[#E2E8F0] bg-[#F8FAFC] p-[40px] sm:min-h-[220px] sm:flex-row sm:items-center sm:justify-between sm:gap-[16px]"
+                className="flex min-w-0 flex-col gap-[20px] rounded-[18px] border border-[#E2E8F0] bg-[#F8FAFC] p-[15px] lg:p-[40px] sm:min-h-[220px] md:flex-row sm:items-center sm:justify-between sm:gap-[16px]"
               >
                 {/* Left: icon + text */}
-                <div className="min-w-0 sm:w-[48%] sm:shrink-0">
-                  <div className="flex h-[46px] w-[46px] items-center justify-center rounded-[10px] bg-[#EBE8FD]">
+                <div className="min-w-0 md:w-[48%] sm:shrink-0">
+                  <div className="flex h-[36px] w-[36px] sm:h-[46px] sm:w-[46px] items-center justify-center rounded-[9px] sm:rounded-[10px] bg-[#EBE8FD]">
                     <img
                       src={item.icon}
                       alt=""
-                      width={23}
-                      height={23}
-                      className="h-[23px] w-[23px]"
+                      className="h-[18px] w-[18px] sm:h-[23px] sm:w-[23px]"
                     />
                   </div>
-                  <h3 className="mt-[14px] text-[24px] leading-[28px] font-semibold tracking-[-0.01em] text-[#1A1523]">
+                  <h3 className="mt-[10px] sm:mt-[14px] text-[14px] sm:text-[24px] sm:leading-[28px] font-semibold tracking-[-0.01em] text-[#1A1523]">
                     {item.title}
                   </h3>
-                  <p className="mt-[10px] text-[12px] leading-[18px] text-[#6B6580]">
+                  <p className="mt-[10px] text-[10px] sm:text-[12px] leading-[18px] text-[#6B6580]">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Right: illustration */}
-                <div className="flex min-w-0 flex-1 items-center justify-center sm:justify-end">
+                <div className="flex min-w-0 flex-1 items-center justify-center md:justify-end">
                   <img
                     src={item.image}
                     alt={item.title}

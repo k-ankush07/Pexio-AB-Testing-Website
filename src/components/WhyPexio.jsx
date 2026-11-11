@@ -30,37 +30,37 @@ export default function WhyPexio() {
   return (
     <section id="why-pexio" className="w-full bg-[#F8FAFC]">
       <Container>
-        <div className="grid grid-cols-1 gap-[30px] py-[40px] md:py-[60px] lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-center lg:gap-[40px] lg:py-[80px]">
+        <div className="grid grid-cols-1 gap-[20px] py-[40px] md:py-[60px] lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:items-center lg:gap-[40px] lg:py-[80px]">
           {/* Left content */}
           <div className="min-w-0">
             <div className="flex items-center gap-[8px]">
-              <span className="h-px w-[16px] bg-[#703CE1]" />
-              <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-[#703CE1]">
+              <span className="h-px w-[22px] bg-[#703CE1]" />
+              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
                 Why Pexio
               </span>
             </div>
 
-           <h2 className="mt-[10px] text-[32px] leading-[40px] font-bold tracking-[-0.02em] text-[#1A1523] md:text-[40px] md:leading-[50px] lg:text-[34px] lg:leading-[44px] xl:text-[42px] xl:leading-[52px]">
+            <h2 className="mt-[10px] text-[30px] leading-[40px] font-bold tracking-[-0.02em] text-[#1A1523] md:text-[40px] md:leading-[50px] lg:text-[34px] lg:leading-[44px] xl:text-[42px] xl:leading-[52px]">
               Stop guessing.
               <br />
               Start growing <span className="text-[#703CE1]">with data.</span>
             </h2>
 
-            <p className="mt-[20px] max-w-[540px] text-[16px] leading-[24px] text-[#6B6580]">
+            <p className="mt-[20px] max-w-[540px] text-[14px] sm:text-[16px] leading-[24px] text-[#6B6580]">
               Pexio gives Shopify teams a disciplined way to test ideas,
               understand customer behavior, and improve every part of the buying
               experience.
             </p>
 
-            <Button href="#features" className="mt-[30px] w-full md:w-auto">
+            <Button href="#features" className="mt-[20px] sm:mt-[30px] w-full md:w-auto">
               Discover the Platform
             </Button>
           </div>
 
           {/* Right: cards */}
-         <div className="grid min-w-0 grid-cols-1 gap-[12px] md:grid-cols-[minmax(0,2fr)_minmax(0,1.1fr)]">
+          <div className="grid min-w-0 grid-cols-1 gap-[12px] md:grid-cols-[minmax(0,2fr)_minmax(0,1.1fr)]">
             {/* 2x2 feature cards */}
-            <div className="grid grid-cols-1 gap-[12px] sm:grid-cols-2">
+            <div className="grid grid-cols-2 gap-[12px] max-[430px]:grid-cols-1">
               {features.map((f) => (
                 <div
                   key={f.title}

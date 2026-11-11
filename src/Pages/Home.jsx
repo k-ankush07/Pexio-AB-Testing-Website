@@ -10,18 +10,18 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="bg-[linear-gradient(270deg,#FFFFFF_29.22%,#D1C1F5_115.33%,#703CE1_148.7%)]">
+      <div className="bg-white md:bg-[linear-gradient(270deg,#FFFFFF_29.22%,#D1C1F5_115.33%,#703CE1_148.7%)]">
         <Navbar />
         <Hero />
       </div>
       <main>
         <WhyPexio />
         <Features />
-        <Pricing />
+        {/* <Pricing />
         <Contact />
-        <CTA />
+        <CTA /> */}
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

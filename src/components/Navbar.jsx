@@ -65,7 +65,7 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
             aria-expanded={open}
-            className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#E5E7EB] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] md:hidden"
+            className="flex h-11 w-11 items-center justify-center rounded-lg border border-[#1A1523] bg-white shadow-[0_1px_2px_rgba(0,0,0,0.05)] md:hidden"
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
               <path
