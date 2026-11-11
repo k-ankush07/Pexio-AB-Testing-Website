@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Container from "./Container";
 import Button from "./Button";
 
@@ -14,23 +14,6 @@ const topics = [
 const inputBase =
   "w-full rounded-[8px] border border-[#E2E8F0] bg-[#F8FAFC] px-[14px] text-[12px] text-[#1A1523] placeholder:text-[#A8A4B8] outline-none transition focus:border-[#703CE1] focus:bg-white";
 
-const Arrow = () => (
-  <svg
-    width="14"
-    height="14"
-    viewBox="0 0 24 24"
-    fill="none"
-    aria-hidden="true"
-  >
-    <path
-      d="M5 12h14M13 6l6 6-6 6"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -39,14 +22,32 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState("idle");
+
+  useEffect(() => {
+    if (status !== "success" && status !== "error") return;
+    const timer = setTimeout(() => setStatus("idle"), 3000);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   const onChange = (e) =>
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    // TODO: API call yahan lagao
-    console.log(form);
+    setStatus("loading");
+    try {
+      const res = await fetch("http://localhost:8001/api/contact/form", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setStatus("success");
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+    }
   };
 
   return (
@@ -158,7 +159,7 @@ export default function Contact() {
               <div className="flex items-center gap-[12px]">
                 <div className="flex h-[36px] w-[36px] shrink-0 items-center justify-center rounded-[10px] bg-[#EBE8FD]">
                   <img
-                   src={`${A}/email.svg`}
+                    src={`${A}/email.svg`}
                     alt=""
                     className="h-[18px] w-[18px]"
                   />
@@ -244,9 +245,25 @@ export default function Contact() {
                 />
               </label>
 
-              <Button type="submit" className="mt-[16px]">
-                Send Message
+              <Button
+                type="submit"
+                className="mt-[16px]"
+                disabled={status === "loading"}
+              >
+                {status === "loading" ? "Sending..." : "Send Message"}
               </Button>
+
+              {status === "success" && (
+                <p className="mt-[12px] text-[12px] font-semibold text-green-600">
+                  Thanks! Your message has been sent. We'll reply within one
+                  business day.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="mt-[12px] text-[12px] font-semibold text-red-600">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>

@@ -1,8 +1,7 @@
 import Container from "./Container";
 import Button from "./Button";
 
-const HERO_IMG =
-  "https://apps.pexio.app/assets/Pexio-Experiment-Dashboard%203.svg";
+const HERO_IMG = "/hero-dashboard.webp";
 const TICK = "https://apps.pexio.app/assets/charm_circle-tick.svg";
 
 const points = ["No-code setup", "No credit card", "Built for Shopify"];
@@ -58,6 +57,10 @@ export default function Hero() {
             <img
               src={HERO_IMG}
               alt="Pexio dashboard preview"
+              width={860}
+              height={558}
+              fetchPriority="high"
+              decoding="async"
               className="h-auto w-full max-w-none object-contain"
             />
           </div>

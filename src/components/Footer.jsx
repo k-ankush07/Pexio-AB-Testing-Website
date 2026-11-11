@@ -6,7 +6,7 @@ const links = [
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
   { label: "Contact Us", href: "#contact" },
-  { label: "Terms & Condtions", href: "#" },
+  { label: "Terms & Conditions", href: "#" },
   { label: "Privacy Policy", href: "#" },
 ];
 
@@ -15,11 +15,21 @@ export default function Footer() {
     <footer className="w-full bg-white">
       <Container>
         <div className="flex flex-col items-center pt-[40px] text-center md:pt-[48px]">
-          <img
-            src={`${A}/Brand%20Logo%20Area.png`}
-            alt="Pexio AB Testing"
-            className="h-auto w-[110px] object-contain md:w-[130px]"
-          />
+          <a
+            href="/"
+            aria-label="Pexio AB Testing home"
+            className="inline-block"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            <img
+              src={`${A}/Brand%20Logo%20Area.png`}
+              alt="Pexio AB Testing"
+              className="h-auto w-[110px] object-contain md:w-[130px]"
+            />
+          </a>
 
           <p className="mt-[20px] text-[14px] sm:text-[16px] leading-[23px] text-[#6B6580]">
             Smarter experimentation for ambitious Shopify teams.
