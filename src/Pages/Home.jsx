@@ -17,9 +17,9 @@ export default function Home() {
       <main>
         <WhyPexio />
         <Features />
-        {/* <Pricing />
+        <Pricing />
         <Contact />
-        <CTA /> */}
+        {/* <CTA /> */}
       </main>
       {/* <Footer /> */}
     </>

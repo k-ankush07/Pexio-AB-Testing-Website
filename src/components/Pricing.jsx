@@ -81,7 +81,7 @@ export default function Pricing() {
           </div>
 
           {/* Cards */}
-          <div className="mx-auto mt-[30px] grid max-w-[1000px] grid-cols-1 gap-[20px] md:mt-[40px] md:grid-cols-2">
+          <div className="mx-auto mt-[20px] grid max-w-[1000px] grid-cols-1 gap-[20px] md:mt-[40px] md:grid-cols-2">
             {plans.map((p) => {
               const f = p.featured;
               return (
@@ -93,8 +93,14 @@ export default function Pricing() {
                       : "border border-[#E2E8F0] bg-white text-[#1A1523]"
                   }`}
                 >
-                  {/* Top row */}
-                  <div className="flex items-center justify-between gap-[12px]">
+                  {/* Top row: mobile = badge upar, desktop = badge right side */}
+                  <div className="flex flex-col items-start gap-[26px] md:flex-row md:items-center md:justify-between md:gap-[12px]">
+                    {f && (
+                      <span className="order-first shrink-0 rounded-full bg-white px-[12px] py-[6px] text-[10px] font-bold uppercase tracking-[0.08em] text-[#703CE1] md:order-last">
+                        Most popular
+                      </span>
+                    )}
+
                     <div className="flex items-center gap-[16px]">
                       <div
                         className={`flex h-[43px] w-[43px] shrink-0 items-center justify-center rounded-[10px] ${
@@ -123,17 +129,11 @@ export default function Pricing() {
                         </p>
                       </div>
                     </div>
-
-                    {f && (
-                      <span className="shrink-0 rounded-full bg-white px-[12px] py-[6px] text-[10px] font-bold uppercase tracking-[0.08em] text-[#703CE1]">
-                        Most popular
-                      </span>
-                    )}
                   </div>
 
                   {/* Price */}
-                  <div className="mt-[32px] flex items-end gap-[10px]">
-                    <span className="text-[44px] leading-[48px] font-bold tracking-[-0.03em] md:text-[54px] md:leading-[60px]">
+                  <div className="mt-[20px] sm:mt-[32px] flex items-end gap-[10px]">
+                    <span className="text-[50px] leading-[48px] font-bold tracking-[-0.03em] md:text-[54px] md:leading-[60px]">
                       {p.price}
                     </span>
                     <span
@@ -146,7 +146,7 @@ export default function Pricing() {
                   </div>
 
                   <p
-                    className={`mt-[30px] text-[12px] leading-[22px] ${
+                    className={`mt-[20px] sm:mt-[32px] text-[12px] leading-[22px] ${
                       f ? "text-white/90" : "text-[#6B6580]"
                     }`}
                   >
@@ -156,7 +156,7 @@ export default function Pricing() {
                   {/* CTA */}
                   <a
                     href={p.href}
-                    className={`mt-[32px] flex h-[50px] w-full items-center justify-center gap-[8px] rounded-[8px] text-[14px] font-semibold transition ${
+                    className={`mt-[20px] sm:mt-[32px] flex h-[50px] w-full items-center justify-center gap-[8px] rounded-[8px] text-[14px] font-semibold transition ${
                       f
                         ? "bg-white text-[#703CE1] hover:bg-[#F3EFFF]"
                         : "border border-[#E2E8F0] bg-[#ffffff] text-[#1A1523] hover:bg-[#F1F5F9]"
@@ -168,7 +168,7 @@ export default function Pricing() {
 
                   {/* Divider */}
                   <div
-                    className={`my-[32px] h-px w-full ${
+                    className={`my-[20px] sm:my-[32px] h-px w-full ${
                       f ? "bg-white/25" : "bg-[#E2E8F0]"
                     }`}
                   />
@@ -182,7 +182,7 @@ export default function Pricing() {
                     {p.listTitle}
                   </p>
 
-                  <ul className="mt-[32px] flex flex-col gap-[14px]">
+                  <ul className="mt-[20px] sm:mt-[32px] flex flex-col gap-[14px]">
                     {p.features.map((item) => (
                       <li key={item} className="flex items-center gap-[14px]">
                         <span
