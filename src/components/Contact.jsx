@@ -77,7 +77,7 @@ export default function Contact() {
           {/* Cards */}
           <div className="mx-auto mt-[30px] grid max-w-[1100px] grid-cols-1 gap-[20px] md:mt-[40px] lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)]">
             {/* Left card */}
-            <div className="flex min-w-0 flex-col rounded-[18px] border border-[#E2E8F0]  p-[24px] md:p-[30px]">
+            <div className=" hidden md:flex min-w-0 flex-col rounded-[18px] border border-[#E2E8F0]  p-[24px] md:p-[30px]">
               <img
                 src={`${A}/Brand%20Logo%20Area.png`}
                 alt="Pexio AB Testing"

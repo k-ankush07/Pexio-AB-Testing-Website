@@ -19,9 +19,9 @@ export default function Home() {
         <Features />
         <Pricing />
         <Contact />
-        {/* <CTA /> */}
+        <CTA />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
