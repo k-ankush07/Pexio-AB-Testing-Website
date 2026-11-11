@@ -27,9 +27,9 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <header className="relative z-50 w-full bg-white">
+    <header className="relative z-50 w-full">
       <Container>
-        <div className="flex items-center justify-between pt-[20px] pb-[20px] md:pt-[30px] md:pb-[0px]">
+        <div className="flex items-center justify-between py-[20px] md:py-[30px]">
           {/* Logo */}
           <a href="/" className="shrink-0" aria-label="Pexio home">
             <img
