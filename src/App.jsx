@@ -1,8 +1,11 @@
+import { Routes, Route, Navigate } from "react-router-dom";
+import Home from "./Pages/Home";
 
 export default function App() {
   return (
-    <div>
-      
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  );
 }
