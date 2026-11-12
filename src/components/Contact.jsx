@@ -106,7 +106,7 @@ export default function Contact() {
                       Email us
                     </p>
                     <p className="truncate text-[12px] font-semibold text-[#1A1523]">
-                      support@pexio.app
+                      ab-support@pexio.app
                     </p>
                   </div>
                 </div>
