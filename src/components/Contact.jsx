@@ -6,7 +6,6 @@ const A = "https://apps.pexio.app/assets";
 
 const topics = [
   "General question",
-  "Partnership",
   "Support",
   "Feature request",
 ];
