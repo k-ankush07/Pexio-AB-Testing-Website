@@ -4,15 +4,10 @@ import Button from "./Button";
 
 const A = "https://apps.pexio.app/assets";
 
-const topics = [
-  "General question",
-  "Support",
-  "Feature request",
-];
+const topics = ["General question", "Support", "Feature request"];
 
 const inputBase =
   "w-full rounded-[8px] border border-[#E2E8F0] bg-[#F8FAFC] px-[14px] text-[12px] text-[#1A1523] placeholder:text-[#A8A4B8] outline-none transition focus:border-[#703CE1] focus:bg-white";
-
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -68,10 +63,10 @@ export default function Contact() {
               <span className="text-[#703CE1]">winning experiment.</span>
             </h2>
 
-            <p className="mt-[10px] text-[14px] leading-[22px] text-[#6B6580] md:text-[16px] md:leading-[24px]">
-              Have a product question, partnership idea, or need a hand getting
-              started? Our team is here to help.
-            </p>
+            {/* <p className="mt-[10px] text-[14px] leading-[22px] text-[#6B6580] md:text-[16px] md:leading-[24px]">
+              Have a product question or need a hand getting started? Our team
+              is here to help.
+            </p> */}
           </div>
 
           {/* Cards */}
@@ -87,10 +82,10 @@ export default function Contact() {
               <h3 className="mt-[40px] text-[28px] leading-[42px] font-semibold tracking-[-0.01em] text-[#1A1523]">
                 Chat with Us
               </h3>
-              <p className="mt-[12px] text-[12px] leading-[20px] text-[#6B6580]">
+              {/* <p className="mt-[12px] text-[12px] leading-[20px] text-[#6B6580]">
                 No ticket maze. Get thoughtful guidance from a team that
                 understands Shopify experimentation.
-              </p>
+              </p> */}
 
               <div className="mt-[28px] flex flex-col gap-[14px]">
                 <div className="flex items-center gap-[12px]">

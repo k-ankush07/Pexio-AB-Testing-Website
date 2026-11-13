@@ -15,6 +15,7 @@ const plans = [
     href: "#",
     listTitle: "What's included",
     features: [
+      "Up to 5 experiments",
       "Core testing features",
       "Basic experimentation",
       "Essential analytics",
@@ -34,17 +35,24 @@ const plans = [
     href: "#",
     listTitle: "Everything you need to scale",
     features: [
-      "Everything in Free",
-      "Advanced audience targeting",
       "Unlimited experiments",
-      "Priority performance insights",
+      "Core testing features",
+      "Basic experimentation",
+      "Essential analytics",
+      "Shopify integration",
     ],
     featured: true,
   },
 ];
 
 const Arrow = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    aria-hidden="true"
+  >
     <path
       d="M5 12h14M13 6l6 6-6 6"
       stroke="currentColor"

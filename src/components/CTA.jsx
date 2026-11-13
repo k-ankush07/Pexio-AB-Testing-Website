@@ -28,9 +28,9 @@ export default function CTA() {
                 decision into opportunity to grow.
               </p>
 
-              <Button href="#contact" className="mt-[20px] md:mt-[30px] w-full md:w-auto">
+              {/* <Button href="#contact" className="mt-[20px] md:mt-[30px] w-full md:w-auto">
                 Start Experiments
-              </Button>
+              </Button> */}
             </div>
 
             {/* Right illustration */}

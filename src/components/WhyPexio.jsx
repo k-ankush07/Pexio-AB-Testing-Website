@@ -52,9 +52,9 @@ export default function WhyPexio() {
               experience.
             </p>
 
-            <Button href="#features" className="mt-[20px] sm:mt-[30px] w-full md:w-auto">
+            {/* <Button href="#features" className="mt-[20px] sm:mt-[30px] w-full md:w-auto">
               Discover the Platform
-            </Button>
+            </Button> */}
           </div>
 
           {/* Right: cards */}
