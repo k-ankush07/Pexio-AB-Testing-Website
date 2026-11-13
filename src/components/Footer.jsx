@@ -6,8 +6,8 @@ const links = [
   // { label: "Features", href: "#features" },
   // { label: "Pricing", href: "#pricing" },
   { label: "Contact Us", href: "#contact" },
-  { label: "Terms & Conditions", href: "#" },
-  { label: "Privacy Policy", href: "#" },
+  { label: "Terms & Conditions", href: "/terms-and-condition" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export default function Footer() {
@@ -51,7 +51,7 @@ export default function Footer() {
         {/* Divider + copyright */}
         <div className="border-t border-[#ECEAF3] py-[18px] text-center">
           <p className="text-[11px] sm:text-[14px] text-[#6B6580]">
-            © 2026 Cart Plus. All rights reserved.
+            © 2026 Pexio Ab Tesing. All rights reserved.
           </p>
         </div>
       </Container>
