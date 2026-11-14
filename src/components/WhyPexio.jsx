@@ -35,7 +35,7 @@ export default function WhyPexio() {
           <div className="min-w-0">
             <div className="flex items-center gap-[8px]">
               <span className="h-px w-[22px] bg-[#703CE1]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
                 Why Pexio
               </span>
             </div>
@@ -75,7 +75,7 @@ export default function WhyPexio() {
                       className="h-[22px] w-[22px]"
                     />
                   </div>
-                  <h3 className="mt-[10px] text-[15px] leading-[22px] font-semibold text-[#1A1523]">
+                  <h3 className="mt-[10px] text-[14px] sm:text-[15px] leading-[22px] font-semibold text-[#1A1523]">
                     {f.title}
                   </h3>
                   <p className="mt-[6px] text-[12px] leading-[19px] text-[#6B6580]">

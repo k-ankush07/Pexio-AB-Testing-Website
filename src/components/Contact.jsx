@@ -52,7 +52,7 @@ export default function Contact() {
           <div className="flex flex-col items-center text-center">
             <div className="flex items-center gap-[8px]">
               <span className="h-px w-[16px] bg-[#703CE1]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
                 Contact
               </span>
             </div>
@@ -159,7 +159,7 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <h3 className="text-[16px] leading-[22px] font-semibold text-[#1A1523]">
+                  <h3 className="text-[18px] sm:text-[20px] leading-[22px] font-semibold text-[#1A1523]">
                     Send us a message
                   </h3>
                   <p className="text-[10px] leading-[14px] text-[#8A8698]">

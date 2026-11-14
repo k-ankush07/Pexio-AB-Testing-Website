@@ -72,7 +72,7 @@ export default function Pricing() {
           <div className="flex flex-col items-center text-center">
             <div className="flex items-center gap-[8px]">
               <span className="h-px w-[16px] bg-[#703CE1]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
                 Simple Pricing
               </span>
             </div>

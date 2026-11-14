@@ -38,7 +38,7 @@ export default function Features() {
           <div className="flex flex-col items-center text-center">
             <div className="flex items-center gap-[8px]">
               <span className="h-px w-[16px] bg-[#703CE1]" />
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
+              <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.15em] text-[#703CE1]">
                 Powerful Features
               </span>
             </div>
@@ -55,7 +55,7 @@ export default function Features() {
           </div>
 
           {/* Cards */}
-          <div className="mx-auto mt-[20px] grid max-w-[1200px] max-[430px]:grid-cols-1 gap-[10px] md:mt-[40px] grid-cols-2">
+          <div className="mx-auto mt-[20px] grid max-w-[1200px] max-[430px]:grid-cols-1 gap-[12px] md:mt-[40px] grid-cols-2">
             {items.map((item) => (
               <div
                 key={item.title}
@@ -73,7 +73,7 @@ export default function Features() {
                   <h3 className="mt-[10px] sm:mt-[14px] text-[14px] sm:text-[24px] sm:leading-[28px] font-semibold tracking-[-0.01em] text-[#1A1523]">
                     {item.title}
                   </h3>
-                  <p className="mt-[10px] text-[10px] sm:text-[12px] leading-[18px] text-[#6B6580]">
+                  <p className="mt-[10px] text-[9px] sm:text-[12px] leading-[18px] text-[#6B6580]">
                     {item.desc}
                   </p>
                 </div>
