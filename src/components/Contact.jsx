@@ -31,7 +31,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch("http://localhost:8001/api/contact/form", {
+      const res = await fetch("https://experiments.pexio.app/backend-api/contact/form", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
